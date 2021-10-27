@@ -1,18 +1,12 @@
 import '../styles/Banner.css';
-import logo from '../assets/logo.svg';
-import Recommendation from "./Recommendation";
+const title = "L'univers du Laptop";
 
-const Banner = () => {
-    const title = "L'univers du Laptop";
+const Banner = ({children}) => {
 
     return (<div className="dlp-banner">
-        <h1>
-            <img src={logo} alt="univers-laptop" className='dlp-logo'/>
-            {title}
-        </h1>
-        <Recommendation/>
+        {children}
     </div>)
 }
 
-
+export {title}
 export default Banner

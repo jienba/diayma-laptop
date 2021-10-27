@@ -1,5 +1,6 @@
 import {laptopList} from "../datas/laptopList";
 import '../styles/ShoppingList.css';
+import Configuration from "./ConfigurationLaptop";
 
 
 const stockageType = [...new Set(laptopList.map(laptop => laptop.typeStockage))];
@@ -19,7 +20,12 @@ const ShoppingList = () => {
                         {laptop.name}
                         {laptop.isBestSale && <span className='dlp-best-sale'>🔥</span>}
                         {laptop.isSpecialOffer && <div className='dlp-sales'>Soldes</div>}
+                        <Configuration
+                            processor={laptop.processor}
+                            frequency={laptop.frequency + ' Ghz'}
+                            rate={laptop.rate}/>
                     </li>
+
                 )}
             </ul>
         </div>
