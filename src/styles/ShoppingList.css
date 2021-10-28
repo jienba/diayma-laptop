@@ -5,38 +5,3 @@
     flex-wrap: wrap;
     max-width: 800px;
 }
-
-.dlp-laptop-item {
-    border: solid 2px black;
-    border-radius: 10px;
-    height: 250px;
-    width: 200px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
-
-.dlp-sales {
-    position: absolute;
-    right: 0px;
-    top: 10px;
-    font-weight: 500;
-    color: white;
-    padding: 5px 10px;
-    background-color: #31b572;
-    border-radius: 3px;
-}
-
-.dlp-best-sale {
-    position: absolute;
-    right: 0px;
-    bottom: 10px;
-    font-weight: 500;
-    color: white;
-    padding: 5px 10px;
-    background-color: #004953;
-    border-radius: 3px;
-}

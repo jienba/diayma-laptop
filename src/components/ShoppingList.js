@@ -1,7 +1,6 @@
 import {laptopList} from "../datas/laptopList";
 import '../styles/ShoppingList.css';
-import Configuration from "./ConfigurationLaptop";
-
+import LaptopItem from "./LaptopItem";
 
 const stockageType = [...new Set(laptopList.map(laptop => laptop.typeStockage))];
 
@@ -15,18 +14,19 @@ const ShoppingList = () => {
                 )}
             </ul>
             <ul className='dlp-laptop-list'>
-                {laptopList.map(laptop =>
-                    <li key={laptop.id} className='dlp-laptop-item'>
-                        {laptop.name}
-                        {laptop.isBestSale && <span className='dlp-best-sale'>🔥</span>}
-                        {laptop.isSpecialOffer && <div className='dlp-sales'>Soldes</div>}
-                        <Configuration
-                            processor={laptop.processor}
-                            frequency={laptop.frequency + ' Ghz'}
-                            rate={laptop.rate}/>
-                    </li>
-
-                )}
+                {
+                    laptopList.map(({id, cover, name, processor, frequency, rate}) => (
+                            <LaptopItem
+                                id={id}
+                                cover={cover}
+                                name={name}
+                                processor={processor}
+                                frequency={frequency}
+                                rate={rate}
+                            />
+                        )
+                    )
+                }
             </ul>
         </div>
 

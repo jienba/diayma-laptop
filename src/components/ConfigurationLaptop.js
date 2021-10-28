@@ -5,6 +5,7 @@ const Configuration = ({ processor, frequency, rate}) => {
     return (<div>
         <span>{processor} </span> <br/>
         <span>{frequency} </span> <br/>
+        <span>{}</span>
         {range.map(rangeElem => rate >= rangeElem ? (<span key={rangeElem.toString()}>⭐</span>) : null)}
     </div>)
 }
