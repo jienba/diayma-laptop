@@ -15,14 +15,16 @@ const ShoppingList = () => {
             </ul>
             <ul className='dlp-laptop-list'>
                 {
-                    laptopList.map(({id, cover, name, processor, frequency, rate}) => (
+                    laptopList.map(({id, cover, name, processor, frequency, rate, typeStockage}) => (
                             <LaptopItem
+                                key={id}
                                 id={id}
                                 cover={cover}
                                 name={name}
                                 processor={processor}
                                 frequency={frequency}
                                 rate={rate}
+                                typeStockage={typeStockage}
                             />
                         )
                     )
