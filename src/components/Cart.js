@@ -18,6 +18,7 @@ const Cart = () => {
             <h3>Total : {monsteraPrice * cart} FCFA </h3>
             <button onClick={() => updateCart(0)}>Vider le panier</button>
 
+
         </div>) :
         (
             <div className='dlp-cart-closed'>
