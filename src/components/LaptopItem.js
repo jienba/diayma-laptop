@@ -1,9 +1,10 @@
 import '../styles/LaptopItem.css'
 import Configuration from "./ConfigurationLaptop"
 
-const LaptopItem = ({id, name, cover, processor, frequency, rate, typeStockage}) => {
+const LaptopItem = ({name, cover, processor, frequency, rate, typeStockage, price}) => {
     return (
-        <li key={id} className='dlp-laptop-item' >
+        <li  className='dlp-laptop-item' >
+            <span className='dlp-laptop-item-price'>{new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XOF' }).format(price)} </span>
             <img className="dlp-laptop-item-cover" src={cover} alt={`${name} cover`}/>
             <span>{name}</span>
             <div>
@@ -18,9 +19,6 @@ const LaptopItem = ({id, name, cover, processor, frequency, rate, typeStockage})
     )
 }
 
-const handleClick = (e) => {
-    // alert(`Vous voulez acheter 1  ${name}? `)
-    console.log('✨ Ceci est mon event :', e)
-}
+
 
 export default LaptopItem

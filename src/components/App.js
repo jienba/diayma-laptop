@@ -6,17 +6,28 @@ import Recommendation from "./Recommendation";
 import QuestionForm from "./QuestionForm";
 import {title} from "./Banner";
 import Footer from "./Footer";
+import {useState} from "react";
+import '../styles/Layout.css'
 
 const App = () => {
+    const [cart, updateCart] = useState([]);
     return (<div>
         <Banner>
-            <img src={logo} alt="univers-laptop" className='dlp-logo'/>
-            <h1>{title}</h1>
+            <h1>
+                <img src={logo} alt="univers-laptop" className='dlp-logo'/>
+                {title}
+            </h1>
             <Recommendation/>
         </Banner>
         {/*<QuestionForm/>*/}
-        <Cart/>
-        <ShoppingList/>
+        <div className='dlp-layout-inner'>
+            <Cart cart={cart} updateCart={updateCart}/>
+            <ShoppingList
+                cart={cart}
+                updateCart={updateCart}
+            />
+        </div>
+
         <Footer/>
     </div>)
 }

@@ -1,4 +1,5 @@
 import laptop from '../assets/laptop.jpg'
+
 export const laptopList = [
     {
         name: 'DELL XPS 13',
@@ -9,7 +10,8 @@ export const laptopList = [
         processor: 'Intel® Core™ i5-1135G7',
         frequency: '2.40 ~ 4.20',
         rate: 5,
-        cover: laptop
+        cover: laptop,
+        price: 550000
     },
     {
         name: 'Dell G5 AMD 15 Gaming',
@@ -19,7 +21,8 @@ export const laptopList = [
         processor: 'AMD Ryzen™ 7 4800H',
         frequency: '2.9 ~ 4.2',
         rate: 4,
-        cover: laptop
+        cover: laptop,
+        price: 720000
     },
     {
         name: 'ThinkPad P50',
@@ -29,7 +32,8 @@ export const laptopList = [
         processor: 'Intel® Core™ i7 i7-6700HQ',
         frequency: '2.6 ~ 3.50',
         rate: 4,
-        cover: laptop
+        cover: laptop,
+        price: 460000
     },
     {
         name: 'Alienware X17',
@@ -40,7 +44,8 @@ export const laptopList = [
         processor: 'Intel® Core™ i7-11800H',
         frequency: '1.90 ~ 4.50',
         rate: 4,
-        cover: laptop
+        cover: laptop,
+        price: 2500000
     },
     {
         name: 'Zenbook Pro Duo (UX581)',
@@ -50,7 +55,8 @@ export const laptopList = [
         processor: 'Intel® Core™ i9-9980HK',
         frequency: '2.4 ~ 5.0',
         rate: 4,
-        cover: laptop
+        cover: laptop,
+        price: 1400000
     },
     {
         name: 'Lenevo Yoga 9i',
@@ -60,7 +66,8 @@ export const laptopList = [
         processor: 'Intel® Core™ i7-1185G7',
         frequency: '3.00 ~ 4.8',
         rate: 4,
-        cover: laptop
+        cover: laptop,
+        price: 900000
     },
     {
         name: 'HP EliteBook x360 830 G7',
@@ -70,7 +77,8 @@ export const laptopList = [
         processor: 'Intel® Core™ i7-1071',
         frequency: '1.10 ~ 4.70',
         rate: 3,
-        cover: laptop
+        cover: laptop,
+        price: 1110000
     },
     {
         name: 'HP Pavilion dv6-6c14nr',
@@ -80,7 +88,8 @@ export const laptopList = [
         processor: 'Intel® Core i5-2450M',
         frequency: '2,50 ~ 3.10',
         rate: 3,
-        cover: laptop
+        cover: laptop,
+        price: 300000
     },
     {
         name: 'ACER Nitro AN517-52-505S',
@@ -91,6 +100,7 @@ export const laptopList = [
         processor: 'Intel® Core i5 10300H',
         frequency: '2.50 ~ 4.50',
         rate: 4,
-        cover: laptop
+        cover: laptop,
+        price: 720000
     }
 ]

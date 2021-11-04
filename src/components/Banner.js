@@ -1,5 +1,5 @@
 import '../styles/Banner.css';
-const title = "L'univers du Laptop";
+const title = "Diayma Laptop";
 
 const Banner = ({children}) => {
 
