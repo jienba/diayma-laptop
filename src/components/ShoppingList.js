@@ -2,10 +2,17 @@ import {laptopList} from "../datas/laptopList";
 import '../styles/ShoppingList.css';
 import LaptopItem from "./LaptopItem";
 import Categories from "./Categories";
+import {useState} from "react";
 
 
 const ShoppingList = ({cart, updateCart}) => {
-    const stockageType = [...new Set(laptopList.map(laptop => laptop.typeStockage))];
+    const stockageType = [...new Set(laptopList.map(laptop => laptop.typeStockage))]
+    const [diskType, setDiskType] = useState('');
+
+    let listLaptopFiltered = laptopList.filter(laptop => laptop.typeStockage === diskType )
+    if (diskType === '') {
+        listLaptopFiltered = laptopList
+    }
 
     const addToCart = (name, price) => {
         const currentLaptopSaved = cart.find(laptop => laptop.name === name)
@@ -26,11 +33,14 @@ const ShoppingList = ({cart, updateCart}) => {
 
             <Categories
                 stockageType={stockageType}
+                setDiskType={setDiskType}
 
             />
+
             <ul className='dlp-laptop-list'>
                 {
-                    laptopList.map(({id, cover, name, processor, frequency, rate, typeStockage, price}) => (
+                    // laptopList.map(({id, cover, name, processor, frequency, rate, typeStockage, price}) => (
+                    listLaptopFiltered.map(({id, cover, name, processor, frequency, rate, typeStockage, price}) => (
                             <div key={id}>
                                 <LaptopItem
                                     cover={cover}
