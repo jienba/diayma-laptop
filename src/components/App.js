@@ -3,14 +3,15 @@ import Cart from "./Cart";
 import ShoppingList from "./ShoppingList";
 import logo from "../assets/logo.svg";
 import Recommendation from "./Recommendation";
-import QuestionForm from "./QuestionForm";
 import {title} from "./Banner";
 import Footer from "./Footer";
 import {useEffect, useState} from "react";
 import '../styles/Layout.css'
 
 const App = () => {
-    const [cart, updateCart] = useState(JSON.parse(localStorage.getItem('cart')));
+    const saveCard = localStorage.getItem('cart')
+
+    const [cart, updateCart] = useState(saveCard? JSON.parse(saveCard) : [] )
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart))
@@ -25,7 +26,6 @@ const App = () => {
             </h1>
             <Recommendation/>
         </Banner>
-        {/*<QuestionForm/>*/}
         <div className='dlp-layout-inner'>
             <Cart cart={cart} updateCart={updateCart}/>
             <ShoppingList
@@ -39,9 +39,5 @@ const App = () => {
 }
 
 
-const handlingClick = (e) => {
-    e.preventDefault()
-    console.log('✨ Ceci est mon event :', e)
-    alert(e.target['my_input'].value)
-}
+
 export default App
