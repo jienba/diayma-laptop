@@ -6,11 +6,8 @@ const Cart = ({cart, updateCart}) => {
     const total = cart.reduce((acc, laptop) => acc + laptop.price * laptop.amount, 0)
 
     useEffect(() => {
-        document.title = `DLP: ${total} Fcfa d'achats`
+        document.title = total === 0 ?  'Diayma Laptop': `DLP: ${total} Fcfa d'achats` ;
     }, [total]);
-
-
-
 
 
     return isOpen ? (<div className='dlp-cart'>
@@ -33,7 +30,7 @@ const Cart = ({cart, updateCart}) => {
                             style: 'currency',
                             currency: 'XOF'
                         }).format(total)} FCFA </h3>
-                        <button  className='dlp-empty-cart' onClick={() => updateCart([])}>Vider le panier</button>
+                        <button className='dlp-empty-cart' onClick={() => updateCart([])}>Vider le panier</button>
                     </div>
 
                 ) :
@@ -46,7 +43,11 @@ const Cart = ({cart, updateCart}) => {
         </div>) :
         (
             <div className='dlp-cart-closed'>
-                <button className='dlp-cart-toggle-button' onClick={() => setIsOpen(true)}>Ouvrir le panier</button>
+                <button
+                    className='dlp-cart-toggle-button'
+                    onClick={() => setIsOpen(true)}>
+                    Ouvrir le panier
+                </button>
             </div>
         )
 

@@ -16,7 +16,7 @@ const Categories = ({stockageType, setDiskType}) => {
                     <option key={typeDisk} value={typeDisk}>{typeDisk}</option>
                 )}
             </select>
-            <button onClick={() => setDiskType('')}>Réinitialiser</button>
+            <button className='dlp-reinit-short' onClick={() => setDiskType('')}>Réinitialiser</button>
 
         </div>
     )

@@ -30,11 +30,9 @@ const ShoppingList = ({cart, updateCart}) => {
 
     return (
         <div>
-
             <Categories
                 stockageType={stockageType}
                 setDiskType={setDiskType}
-
             />
 
             <ul className='dlp-laptop-list'>
@@ -53,8 +51,6 @@ const ShoppingList = ({cart, updateCart}) => {
                                 />
                                 <button className='dlp-add-button' onClick={() => addToCart(name, price)}>Ajouter</button>
                             </div>
-
-
                         )
                     )
                 }

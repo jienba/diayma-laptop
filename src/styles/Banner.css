@@ -1,8 +1,8 @@
 .dlp-banner{
-    color: black;
+    /*color: black;*/
     text-align: right;
     padding: 32px;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px aliceblue;
 }
 
 .dlp-title {

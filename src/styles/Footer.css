@@ -1,7 +1,6 @@
 .dlp-footer {
-    color: black;
     padding: 32px;
-    border-top: solid 3px black;
+    border-top: solid 3px white;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
