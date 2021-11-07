@@ -6,11 +6,17 @@ import Recommendation from "./Recommendation";
 import QuestionForm from "./QuestionForm";
 import {title} from "./Banner";
 import Footer from "./Footer";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import '../styles/Layout.css'
 
 const App = () => {
-    const [cart, updateCart] = useState([]);
+    const [cart, updateCart] = useState(JSON.parse(localStorage.getItem('cart')));
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart]);
+
+
     return (<div>
         <Banner>
             <h1>

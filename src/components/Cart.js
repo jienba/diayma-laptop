@@ -1,9 +1,16 @@
 import '../styles/Cart.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const Cart = ({cart, updateCart}) => {
     const [isOpen, setIsOpen] = useState(true);
     const total = cart.reduce((acc, laptop) => acc + laptop.price * laptop.amount, 0)
+
+    useEffect(() => {
+        document.title = `DLP: ${total} Fcfa d'achats`
+    }, [total]);
+
+
+
 
 
     return isOpen ? (<div className='dlp-cart'>
@@ -22,7 +29,10 @@ const Cart = ({cart, updateCart}) => {
                                 )
                             }
                         </ul>
-                        <h3>Total : {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XOF' }).format(total)} FCFA </h3>
+                        <h3>Total : {new Intl.NumberFormat('fr-FR', {
+                            style: 'currency',
+                            currency: 'XOF'
+                        }).format(total)} FCFA </h3>
                         <button onClick={() => updateCart([])}>Vider le panier</button>
                     </div>
 
