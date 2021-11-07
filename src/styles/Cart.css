@@ -1,3 +1,6 @@
+button{
+    cursor: pointer;
+}
 .dlp-cart {
     padding: 32px;
     color: #FFF;
