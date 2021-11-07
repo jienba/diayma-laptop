@@ -6,9 +6,9 @@ const LaptopItem = ({name, cover, processor, frequency, rate, typeStockage, pric
         <li  className='dlp-laptop-item' >
             <span className='dlp-laptop-item-price'>{new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XOF' }).format(price)} </span>
             <img className="dlp-laptop-item-cover" src={cover} alt={`${name} cover`}/>
-            <span>{name}</span>
             <div>
                 <Configuration
+                    name={name}
                     processor={processor}
                     frequency={frequency + ' Ghz'}
                     rate={rate}
