@@ -51,7 +51,7 @@ const ShoppingList = ({cart, updateCart}) => {
                                     typeStockage={typeStockage}
                                     price={price}
                                 />
-                                <button onClick={() => addToCart(name, price)}>Ajouter</button>
+                                <button className='dlp-add-button' onClick={() => addToCart(name, price)}>Ajouter</button>
                             </div>
 
 

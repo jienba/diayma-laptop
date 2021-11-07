@@ -33,7 +33,7 @@ const Cart = ({cart, updateCart}) => {
                             style: 'currency',
                             currency: 'XOF'
                         }).format(total)} FCFA </h3>
-                        <button onClick={() => updateCart([])}>Vider le panier</button>
+                        <button  className='dlp-empty-cart' onClick={() => updateCart([])}>Vider le panier</button>
                     </div>
 
                 ) :

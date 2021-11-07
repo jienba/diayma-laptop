@@ -1,4 +1,4 @@
-.dlp-cart{
+.dlp-cart {
     padding: 32px;
     color: #FFF;
     background-color: #31b572;
@@ -10,14 +10,28 @@
 }
 
 .dlp-cart-toggle-button {
-    background: none;
     outline: none;
     border: none;
     font-weight: 600;
     cursor: pointer;
     align-self: self-start;
-    padding: 0;
     color: white;
+    border-radius: 20px 20px 20px 0;
+    background-color: #01803c;
+    padding: 10px;
+}
+
+.dlp-empty-cart {
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: self-start;
+    color: white;
+    border-radius: 20px;
+    background-color: #6f1515;
+    padding: 10px;
+
 }
 
 .dlp-cart-closed {
