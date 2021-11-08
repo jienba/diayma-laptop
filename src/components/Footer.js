@@ -14,12 +14,15 @@ function Footer() {
                 Pour les passionné·e·s des TIC 💻
             </div>
             <div className='dlp-footer-elem'>Laissez-nous votre mail : </div>
-            <input type="text"
-                   placeholder="Entrez votre email"
-                   onChange={handleInput}
-                   // value={inputValue}
-                   onBlur={() => validateMail(inputValue)}
-            />
+            <form data-netlify="true">
+                <input type="text"
+                       placeholder="Entrez votre email"
+                       onChange={handleInput}
+                    // value={inputValue}
+                       onBlur={() => validateMail(inputValue)}
+                />
+            </form>
+
         </footer>
     )
 }
